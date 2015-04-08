@@ -234,7 +234,7 @@ exports.sanitizePadId = function(padId, callback) {
 
 exports.isValidPadId = function(padId)
 {
-  return /^(g.[a-zA-Z0-9]{16}\$)?[^$]{1,50}$/.test(padId);
+  return /^(g.[a-zA-Z0-9]{16}\$)?[^$]{1,1024}$/.test(padId); //Filename path length raised from 50 to 1014, do we really need a filename limit?
 }
 
 /**
